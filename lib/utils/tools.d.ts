@@ -1,0 +1,21 @@
+/// <reference types="cheerio" />
+import { RequestInit } from "node-fetch";
+export declare function getText(url: string, options?: RequestInit): Promise<string>;
+export declare function getJSON(url: string, options?: RequestInit): Promise<any>;
+export declare function HTML(url: string, options?: RequestInit): Promise<cheerio.Root>;
+export declare function checkThumb(thumbnail?: string): string | undefined;
+export declare function hasFinished(finished?: string): boolean;
+export declare function getSlug(href?: string): string | undefined;
+export declare function toSlug(title?: string): string | undefined;
+export declare function GeekGen(title: string): string;
+export declare function isExtra(title: string): boolean;
+export declare function toStringNumber(value: string): string | null;
+export declare function toNumber(value: string): number | null;
+export declare function generateHash(size?: number): string;
+export declare function hash(): string;
+export declare function getChapterNumber(number?: string | number): number;
+export declare function getChapterTitle(number?: string | number): string;
+export declare function getChapterId(url?: string): number | false;
+export declare function unionChapterNumberFormat(chapter_number: number): string;
+export declare function atob(data: string): string;
+export declare function btoa(data: string): string;

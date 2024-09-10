@@ -1,0 +1,9 @@
+{
+  "name": "mgbuild",
+  "version": "1.6.4",
+  "description": "",
+  "main": "lib/index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

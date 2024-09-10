@@ -1,0 +1,134 @@
+export declare type GetRecentChaptersResponse = {
+    result: string;
+    response: string;
+    data: Daum[];
+    limit: number;
+    offset: number;
+    total: number;
+};
+declare type Daum = {
+    id: string;
+    type: string;
+    attributes: Attributes;
+    relationships: Relationship[];
+};
+declare type Attributes = {
+    volume?: string;
+    chapter: string;
+    title?: string;
+    translatedLanguage: string;
+    externalUrl: any;
+    publishAt: string;
+    readableAt: string;
+    createdAt: string;
+    updatedAt: string;
+    pages: number;
+    version: number;
+};
+declare type Relationship = {
+    id: string;
+    type: string;
+    attributes: Attributes2;
+};
+declare type Attributes2 = {
+    name?: string;
+    altNames?: AltName[];
+    locked?: boolean;
+    website?: string;
+    ircServer: any;
+    ircChannel: any;
+    discord?: string;
+    contactEmail?: string;
+    description: any;
+    twitter?: string;
+    mangaUpdates?: string;
+    focusedLanguages?: string[];
+    official?: boolean;
+    verified?: boolean;
+    inactive?: boolean;
+    publishDelay: any;
+    createdAt?: string;
+    updatedAt?: string;
+    version: number;
+    exLicensed?: boolean;
+    title?: Title;
+    altTitles?: AltTitle[];
+    isLocked?: boolean;
+    links?: Links;
+    originalLanguage?: string;
+    lastVolume?: string;
+    lastChapter?: string;
+    publicationDemographic?: string;
+    status?: string;
+    year?: number;
+    contentRating?: "erotica" | "safe" | "suggestive";
+    tags?: Tag[];
+    state?: string;
+    chapterNumbersResetOnNewVolume?: boolean;
+    availableTranslatedLanguages?: string[];
+    latestUploadedChapter?: string;
+    username?: string;
+    roles?: string[];
+};
+declare type AltName = {
+    en: string;
+};
+declare type Title = {
+    en: string;
+};
+declare type AltTitle = {
+    ja?: string;
+    en?: string;
+    fr?: string;
+    zh?: string;
+    "zh-hk"?: string;
+    ru?: string;
+    ne?: string;
+    ar?: string;
+    th?: string;
+    ko?: string;
+    de?: string;
+    it?: string;
+    "zh-ro"?: string;
+    vi?: string;
+    es?: string;
+    "pt-br"?: string;
+    "ja-ro"?: string;
+    "ko-ro"?: string;
+    pt?: string;
+    uk?: string;
+    tr?: string;
+    "es-la"?: string;
+    tl?: string;
+    pl?: string;
+};
+declare type Links = {
+    al?: string;
+    ap?: string;
+    bw?: string;
+    kt?: string;
+    mu?: string;
+    nu?: string;
+    amz?: string;
+    cdj?: string;
+    ebj?: string;
+    mal?: string;
+    raw?: string;
+    engtl?: string;
+};
+declare type Tag = {
+    id: string;
+    type: string;
+    attributes: Attributes3;
+    relationships: any[];
+};
+declare type Attributes3 = {
+    name: Name;
+    description: object;
+    group: string;
+    version: number;
+};
+declare type Name = {
+    en: string;
+};
+export {};
