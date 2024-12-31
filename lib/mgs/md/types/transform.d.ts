@@ -33,7 +33,7 @@ export declare type MangaInfo = {
     title: string;
     slug: string;
     geek: string;
-    description: string;
+    description?: string;
     cover: string;
     tags: string[];
     available: boolean;

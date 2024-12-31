@@ -1,3 +1,4 @@
+import { LanguageItem } from "../../../utils/type";
 export declare type GetMangaInfoResponse = {
     result: string;
     response: string;
@@ -31,20 +32,9 @@ declare type Attributes = {
     availableTranslatedLanguages: string[];
     latestUploadedChapter: string;
 };
-declare type Title = {
-    en: string;
-    "ja-ro"?: string;
-};
-declare type AltTitle = {
-    "ja-ro"?: string;
-    en?: string;
-    ja?: string;
-    pl?: string;
-};
-declare type Description = {
-    en: string;
-    "pt-br": string;
-};
+declare type Title = LanguageItem;
+declare type AltTitle = LanguageItem;
+declare type Description = LanguageItem;
 declare type Links = {
     al: string;
     ap: string;

@@ -1,14 +1,21 @@
+import { LanguageItem, Languages } from "../../../utils/type";
 export declare const CHAPTERS_PER_PAGE = 96;
 export declare function getPage(targetChapterPage: number): number;
 export declare type ChapterEndpointConfig = {
+    number: number;
+    language: Languages;
+};
+export declare type ChaptersEndpointConfig = {
     order: "asc" | "desc";
+    language: Languages;
     page: number;
 };
 export declare const endpoints: {
     info: (manga_id: string) => string;
-    chapters: (manga_id: string, config: ChapterEndpointConfig) => string;
+    chapters: (manga_id: string, config: ChaptersEndpointConfig) => string;
+    chapter: (manga_id: string, config: ChapterEndpointConfig) => string;
     pages: (chapter_id: string) => string;
-    recents: () => string;
+    recents: (language: Languages) => string;
     bulkInfo: (manga_ids: string[]) => string;
 };
 export declare const headers: {
@@ -27,3 +34,5 @@ export declare const headers: {
     "user-agent": string;
 };
 export declare function request<T>(url: string): Promise<T>;
+export declare function getLanguageItem(data: LanguageItem, language: Languages): string;
+export declare function cleanDescription(description: string): string | undefined;
